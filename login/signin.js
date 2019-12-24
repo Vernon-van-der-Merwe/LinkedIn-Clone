@@ -5,7 +5,7 @@ function checkLogin(){
     var password = $(".password").val();
 
 
-    if (username == "comp" && password == "comp" || username == "comp" && password == "comp" || username == "rep" && password == "rep") {
+    if (username == "comp" && password == "comp" || username == "user" && password == "user" || username == "rep" && password == "rep") {
         
         if (username == "comp") {
             $(location).attr('href', 'dashboard/comp/landing/index.html')
