@@ -8,7 +8,7 @@ function checkLogin(){
     if (username == "comp" && password == "comp" || username == "comp" && password == "comp" || username == "rep" && password == "rep") {
         
         if (username == "comp") {
-            $(location).attr('href', 'dashboard/Comp/landing/index.html')
+            $(location).attr('href', 'dashboard/comp/landing/index.html')
         }
         if (username == "rep") {
             // $(location).attr('href', 'dashboard/rep/index.html')
