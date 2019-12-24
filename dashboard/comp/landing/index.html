@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    FindaComp
+  </title>
+  <!-- Favicon -->
+  <link href=".../../../assets/" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../../../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="../../../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/vendor/quill/dist/quill.core.css" type="text/css">
+  <link href="../../../assets/css/argon-dashboard.css?v=1.1.1" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="">
+
+  <nav class="sidebar navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-black" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main"
+        aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Profile-->
+
+
+
+      <a class="nav-link pt-2 pb-2 card shadow" onclick="navAction()" data-toggle="modal" data-target="#modal-form">
+        <div class="media align-items-center">
+          <span class="avatar avatar-sm rounded-circle">
+            <img alt="Image placeholder" src="../../../assets/img/theme/FindaComp-transparrent-small.png">
+          </span>
+          <div class="media-body ml-2 d-none d-lg-block">
+            <span class="mb-0 text-sm  font-weight-bold">FincaComp</span>
+          </div>
+        </div>
+      </a>
+
+
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <hr class="my-3">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="./index.html">
+                <img src="../../../assets/img/brand/blue.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main"
+                aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        <form class="mt-4 mb-3 d-md-none">
+          <div class="input-group input-group-rounded input-group-merge">
+            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search"
+              aria-label="Search">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <span class="fa fa-search"></span>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+          <li class="nav-item  active ">
+            <a class="nav-link  active " href="../landing/index.html">
+              <i class="ni ni-tv-2 text-primary"></i> Home
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="../Messaging/index.html">
+              <i class="ni ni-chat-round text-primary"></i> Messaging
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link  " href="../Representatives/index.html">
+              <i class="ni ni-circle-08 text-primary"></i> Representatives
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link  " href="../Analytics/index.html">
+              <i class="ni ni-chart-bar-32 text-primary"></i> Analytics
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+    </div>
+  </nav>
+
+  <div class="main-content main">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Dashboard</a>
+
+        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+              </div>
+              <input class="form-control" placeholder="Search" type="text">
+            </div>
+          </div>
+        </form>
+
+
+      </div>
+    </nav>
+    <!-- END Navbar -->
+
+
+
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-4">
+      <!-- Write a post -->
+      <div class="col-md-8 col-md-offset-4  mb-2 mt-7 col-centered">
+        <div class="card bg-secondary shadow">
+          <div class="card-header bg-white border-0 mb-2">
+            <div class="row align-items-center">
+              <div class="col-12">
+                <h3 class="mb-0">Write a post</h3>
+              </div>
+            </div>
+          </div>
+          <form>
+            <!-- Post body -->
+            <div class="col-md-12 pb-0">
+              <div class="form-group focused">
+                <textarea rows="4" class="form-control form-control-alternative"
+                  placeholder="Something you want to say ..."></textarea>
+              </div>
+              <div class="text-center pb-2 pt-0">
+                <button type="button" class="btn btn-outline-primary ">Post</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- END Header -->
+
+
+    <!-- Post card -->
+    <div class="col-md-8 col-md-offset-4  mb-2 mt--5 col-centered">
+      <div class="card bg-white shadow">
+
+        <div class="card-header bg-white border-0 mb-2">
+          <div class="row align-items-center">
+            <div class="col-12">
+
+              <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <div class="media align-items-center">
+                  <span class="avatar avatar-sm rounded-circle">
+                    <img alt="Image placeholder" src="../../../assets/img/theme/team-4-800x800.jpg">
+                  </span>
+                  <div class="media-body ml-2 d-none d-lg-block">
+                    <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+                  <p>
+          <b>
+            Holiday Gift No.2: LINKEDIN profile summary template…..
+
+            About
+            I am a BSc. educated Head of Operations with a demonstrated history of delivering large, complex projects. I
+            have a passion for technology and the positive impact it creates in business transformation and process
+            improvement.
+
+            Highly skilled in strategic product development and in leading high performing, ... <a href="">READ MORE</a> 
+          </b>
+        </p>
+        <div><div class="row">
+          <div class="col pb-3">
+              <button type="button" class="btn btn-outline-info">Like</button>
+              <button type="button" class="btn btn-outline-success">comment</button>
+              <button type="button" class="btn btn-outline-primary">share</button>
+          </div>
+        </div></div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END Post card -->
+        <!-- Post card -->
+        <div class="col-md-8 col-md-offset-4  mb-2 mt-5 col-centered">
+            <div class="card bg-white shadow">
+      
+              <div class="card-header bg-white border-0 mb-2">
+                <div class="row align-items-center">
+                  <div class="col-12">
+      
+                    <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <div class="media align-items-center">
+                        <span class="avatar avatar-sm rounded-circle">
+                          <img alt="Image placeholder" src="../../../assets/img/theme/team-4-800x800.jpg">
+                        </span>
+                        <div class="media-body ml-2 d-none d-lg-block">
+                          <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                        </div>
+                      </div>
+                    </a>
+      
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid">
+                        <p>
+                <b>
+                  Holiday Gift No.2: LINKEDIN profile summary template…..
+      
+                  About
+                  I am a BSc. educated Head of Operations with a demonstrated history of delivering large, complex projects. I
+                  have a passion for technology and the positive impact it creates in business transformation and process
+                  improvement.
+      
+                  Highly skilled in strategic product development and in leading high performing, ... <a href="">READ MORE</a> 
+                </b>
+              </p>
+              <div><div class="row">
+                <div class="col pb-3">
+                    <button type="button" class="btn btn-outline-info">Like</button>
+                    <button type="button" class="btn btn-outline-success">comment</button>
+                    <button type="button" class="btn btn-outline-primary">share</button>
+                </div>
+              </div></div>
+              </div>
+      
+            </div>
+          </div>
+          <!-- END Post card -->
+              <!-- Post card -->
+    <div class="col-md-8 col-md-offset-4  mb-2 mt-5 col-centered">
+        <div class="card bg-white shadow">
+  
+          <div class="card-header bg-white border-0 mb-2">
+            <div class="row align-items-center">
+              <div class="col-12">
+  
+                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <div class="media align-items-center">
+                    <span class="avatar avatar-sm rounded-circle">
+                      <img alt="Image placeholder" src="../../../assets/img/theme/team-4-800x800.jpg">
+                    </span>
+                    <div class="media-body ml-2 d-none d-lg-block">
+                      <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                    </div>
+                  </div>
+                </a>
+  
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+                    <p>
+            <b>
+              Holiday Gift No.2: LINKEDIN profile summary template…..
+  
+              About
+              I am a BSc. educated Head of Operations with a demonstrated history of delivering large, complex projects. I
+              have a passion for technology and the positive impact it creates in business transformation and process
+              improvement.
+  
+              Highly skilled in strategic product development and in leading high performing, ... <a href="">READ MORE</a> 
+            </b>
+          </p>
+          <div><div class="row">
+            <div class="col pb-3">
+                <button type="button" class="btn btn-outline-info">Like</button>
+                <button type="button" class="btn btn-outline-success">comment</button>
+                <button type="button" class="btn btn-outline-primary">share</button>
+            </div>
+          </div></div>
+          </div>
+  
+        </div>
+      </div>
+      <!-- END Post card -->
+          <!-- Post card -->
+    <div class="col-md-8 col-md-offset-4  mb-2 mt-5 col-centered">
+        <div class="card bg-white shadow">
+  
+          <div class="card-header bg-white border-0 mb-2">
+            <div class="row align-items-center">
+              <div class="col-12">
+  
+                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <div class="media align-items-center">
+                    <span class="avatar avatar-sm rounded-circle">
+                      <img alt="Image placeholder" src="../../../assets/img/theme/team-4-800x800.jpg">
+                    </span>
+                    <div class="media-body ml-2 d-none d-lg-block">
+                      <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                    </div>
+                  </div>
+                </a>
+  
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+                    <p>
+            <b>
+              Holiday Gift No.2: LINKEDIN profile summary template…..
+  
+              About
+              I am a BSc. educated Head of Operations with a demonstrated history of delivering large, complex projects. I
+              have a passion for technology and the positive impact it creates in business transformation and process
+              improvement.
+  
+              Highly skilled in strategic product development and in leading high performing, ... <a href="">READ MORE</a> 
+            </b>
+          </p>
+          <div><div class="row">
+            <div class="col pb-3">
+                <button type="button" class="btn btn-outline-info">Like</button>
+                <button type="button" class="btn btn-outline-success">comment</button>
+                <button type="button" class="btn btn-outline-primary">share</button>
+            </div>
+          </div></div>
+          </div>
+  
+        </div>
+      </div>
+      <!-- END Post card -->
+          <!-- Post card -->
+    <div class="col-md-8 col-md-offset-4  mb-2 mt-5 col-centered">
+        <div class="card bg-white shadow">
+  
+          <div class="card-header bg-white border-0 mb-2">
+            <div class="row align-items-center">
+              <div class="col-12">
+  
+                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <div class="media align-items-center">
+                    <span class="avatar avatar-sm rounded-circle">
+                      <img alt="Image placeholder" src="../../../assets/img/theme/team-4-800x800.jpg">
+                    </span>
+                    <div class="media-body ml-2 d-none d-lg-block">
+                      <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                    </div>
+                  </div>
+                </a>
+  
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+                    <p>
+            <b>
+              Holiday Gift No.2: LINKEDIN profile summary template…..
+  
+              About
+              I am a BSc. educated Head of Operations with a demonstrated history of delivering large, complex projects. I
+              have a passion for technology and the positive impact it creates in business transformation and process
+              improvement.
+  
+              Highly skilled in strategic product development and in leading high performing, ... <a href="">READ MORE</a> 
+            </b>
+          </p>
+          <div><div class="row">
+            <div class="col pb-3">
+                <button type="button" class="btn btn-outline-info">Like</button>
+                <button type="button" class="btn btn-outline-success">comment</button>
+                <button type="button" class="btn btn-outline-primary">share</button>
+            </div>
+          </div></div>
+          </div>
+  
+        </div>
+      </div>
+      <!-- END Post card -->
+          <!-- Post card -->
+    <div class="col-md-8 col-md-offset-4  mb-2 mt-5 col-centered">
+        <div class="card bg-white shadow">
+  
+          <div class="card-header bg-white border-0 mb-2">
+            <div class="row align-items-center">
+              <div class="col-12">
+  
+                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <div class="media align-items-center">
+                    <span class="avatar avatar-sm rounded-circle">
+                      <img alt="Image placeholder" src="../../../assets/img/theme/team-4-800x800.jpg">
+                    </span>
+                    <div class="media-body ml-2 d-none d-lg-block">
+                      <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                    </div>
+                  </div>
+                </a>
+  
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+                    <p>
+            <b>
+              Holiday Gift No.2: LINKEDIN profile summary template…..
+  
+              About
+              I am a BSc. educated Head of Operations with a demonstrated history of delivering large, complex projects. I
+              have a passion for technology and the positive impact it creates in business transformation and process
+              improvement.
+  
+              Highly skilled in strategic product development and in leading high performing, ... <a href="">READ MORE</a> 
+            </b>
+          </p>
+          <div><div class="row">
+            <div class="col pb-3">
+                <button type="button" class="btn btn-outline-info">Like</button>
+                <button type="button" class="btn btn-outline-success">comment</button>
+                <button type="button" class="btn btn-outline-primary">share</button>
+            </div>
+          </div></div>
+          </div>
+  
+        </div>
+      </div>
+      <!-- END Post card -->
+
+
+
+
+
+  </div>
+
+
+
+  <!-- user profile modal -->
+  <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true"
+    style="display: none;">
+    <div class="modal-dialog modal-dialog-centered modal-lg pt-5" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="card card-profile shadow">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <a href="#">
+                    <img src="../../../assets/img/theme/FindaComp logo.png" class="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
+                <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+              </div>
+            </div>
+            <div class="card-body pt-0 pt-md-4">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                    <div>
+                      <span class="heading">22</span>
+                      <span class="description">Friends</span>
+                    </div>
+                    <div>
+                      <span class="heading">10</span>
+                      <span class="description">Photos</span>
+                    </div>
+                    <div>
+                      <span class="heading">89</span>
+                      <span class="description">Comments</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="card-body">
+              <form>
+                <h6 class="heading-small text-muted mb-4">User information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">Username</label>
+                        <input type="text" id="input-username" class="form-control form-control-alternative"
+                          placeholder="Username" value="lucky.jesse">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Email address</label>
+                        <input type="email" id="input-email" class="form-control form-control-alternative"
+                          placeholder="jesse@example.com">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">First name</label>
+                        <input type="text" id="input-first-name" class="form-control form-control-alternative"
+                          placeholder="First name" value="Lucky">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Last name</label>
+                        <input type="text" id="input-last-name" class="form-control form-control-alternative"
+                          placeholder="Last name" value="Jesse">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <!-- Address -->
+                <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Address</label>
+                        <input id="input-address" class="form-control form-control-alternative"
+                          placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                          type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">City</label>
+                        <input type="text" id="input-city" class="form-control form-control-alternative"
+                          placeholder="City" value="New York">
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-country">Country</label>
+                        <input type="text" id="input-country" class="form-control form-control-alternative"
+                          placeholder="Country" value="United States">
+
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-country">Postal code</label>
+                        <input type="number" id="input-postal-code" class="form-control form-control-alternative"
+                          placeholder="Postal code">
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary">Change info</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+  <!-- END user profile modal END-->
+
+
+
+  <!--   Core   -->
+  <script src="../../../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../../../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--   Optional JS   -->
+  <script src="assets/vendor/quill/dist/quill.min.js"></script>
+  <script src="../../../assets/js/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="../../../assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
+  <!--   Argon JS   -->
+  <script src="../../../assets/js/argon-dashboard.min.js?v=1.1.1"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script src="dashboard.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-dashboard-free"
+      });
+  </script>
+</body>
+
+</html>
