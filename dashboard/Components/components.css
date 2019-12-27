@@ -1,0 +1,12 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.sidebar{
+    background-color: rgb(68, 68, 68);
+}
+.nav-link{
+    text-decoration:none;
+    color: white;
+}
